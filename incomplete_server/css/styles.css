@@ -1,0 +1,30 @@
+h1 {
+  text-align:center;
+}
+body {
+  background-color:#b0c4de;
+}
+
+#searchForm {
+  text-align: center;
+}
+#userText {
+  margin: 5px;
+  width: 250px;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 10px;
+}
+#buttonSearch {
+  background-color: #33FFCC;
+  font-size: 15px;
+  border-radius: 10px;
+}
+#buttonSearch:hover {
+  background-color: #00FF00;
+  transition-duration: 1s;
+}
+
+.entries {
+  background-color: red;
+}

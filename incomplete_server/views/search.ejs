@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SearchSystem</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+
+<body>
+
+  <h1>Search documents of the U.S.A. Congress</h1>
+
+  <hr>
+
+  <div id="allResults">
+
+    <% if ( Object.keys(documents).length != 0 ) { %>
+
+      <% for ( index in documents ) { %>
+
+        <div class="post">
+          <% var document = documents[index] %>
+          <h3><a href='/document/<%= document.id%>'> <%= document.name %> </a></h3>
+          <% var entries = document.entries%>
+          <ul> <% for ( var i=0; i<entries.length; i++ ) { %>
+            <li> <%= entries[i] %> </li>
+          <% } %> </ul>
+        </div>
+
+      <% } %>
+
+    <% } else { %>
+      <p>Ничего не найдено</p>
+    <% } %>
+
+  </div>
+
+  <hr>
+
+  <button><a href='/'>main page</a></button>
+
+</body>
+
+</html>

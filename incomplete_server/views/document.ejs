@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SearchSystem</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+
+<body>
+
+  <h1><%= document.name %></h1>
+
+  <hr>
+
+  <div class="entries">
+    <% var entries = document.entries %>
+    <ul ><% for ( var i=0; i<entries.length; i++ ) { %>
+      <li><%= entries[i] %></li>
+    <% } %> </ul>
+  </div>
+
+  <hr>
+
+  <button><a href='/search'>back</a></button>
+
+</body>
+
+</html>
